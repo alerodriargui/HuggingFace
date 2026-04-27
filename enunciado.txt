@@ -1,18 +1,24 @@
-Data Mining. Homework 1
-The goal of this homework is to study chapter 5 of the book by applying the clustering
-and topic discovery strategies explained on a different dataset of HuggingFace.
+Data Mining - Homework 1
+
+The goal of this homework is to study Chapter 5 of the book by applying the clustering
+and topic discovery strategies to a different HuggingFace dataset.
+
 from datasets import load_dataset
 emotions = load_dataset("emotion")
-This data set has three subsets:
+
+This dataset has three subsets:
 emotions["train"]
 emotions["validation"]
 emotions["test"]
-and each one, texts and labels. For instance, the first text and its first label is:
+
+Each subset contains texts and labels. For instance, the first training text and its label are:
 emotions["train"]["text"][0]
 emotions["train"]["label"][0]
-The training text can be used to get some parameters. Then the labels can be used
-to report the agreement of the clustering and topics discovered. But the labels are not
-the absolute true. You can get better topics!
-Please submit a Jupyter notebook or similar in groups of two people, and include some
-conclusions. You have two weeks to do it but start early as there may be problems with
-the libraries, the computational time, etc.
+
+Use the training texts to estimate parameters. Then use the labels to report agreement
+with the discovered clusters and topics. However, labels are not absolute truth: you may
+find better topics.
+
+Please submit a Jupyter notebook (or similar) in groups of two people, and include
+conclusions. You have two weeks to complete it, but start early because there may be
+issues with libraries, computational time, etc.
